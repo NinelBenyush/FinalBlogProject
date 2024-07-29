@@ -3,6 +3,7 @@ import './App.css'
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Hero from './components/Hero';
+import Login from './components/Login';
 import { BrowserRouter as Router, Route, Routes   } from 'react-router-dom';
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
       <div className="flex-grow-1">
         <Routes >
         <Route path="/" element={<Hero/>} />
+        <Route path="/login" element={<Login/>} />
         </Routes >
       </div>
       <Footer />
