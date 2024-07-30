@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import './App.css'
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
@@ -8,6 +8,15 @@ import Register from './components/Register';
 import { BrowserRouter as Router, Route, Routes   } from 'react-router-dom';
 
 function App() {
+  useEffect(() => {
+    fetch('http://localhost:5000/')
+      .then(response => response.json())
+      .then(data => {
+        console.log('Data from  API:' + data.message);
+      })
+      .catch(error => {
+      });
+  }, []);
 
   return (
     <Router>

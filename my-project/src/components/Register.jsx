@@ -1,5 +1,6 @@
 import React from "react";
 import img from "../assets/signUpImg.svg";
+import axios from 'axios';
 
 function Register(){
     return (
